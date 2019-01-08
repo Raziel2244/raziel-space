@@ -64,10 +64,10 @@ a {
   text-decoration: none;
 }
 
-a li {
+a li, a i {
   color: inherit;
 }
 
 a:hover {
-  color: rgb(255, 0, 0);
+  color: hsla(105, 100%, 50%, 1);
 }
