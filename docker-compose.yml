@@ -1,0 +1,11 @@
+version: "3"
+services:
+  ng:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - modules:/app/node_modules
+      - .:/app
+volumes:
+  modules:
