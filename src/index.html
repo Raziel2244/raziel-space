@@ -4,7 +4,6 @@
   <head>
     <meta charset="utf-8">
     <title>Raziel.Space</title>
-    <base href="/">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -18,6 +17,11 @@
     <link rel="manifest" href="/assets/site.webmanifest?v=ajysr5673">
     <link rel="mask-icon" href="/assets/safari-pinned-tab.svg?v=ajysr5673" color="#000000">
     <link rel="shortcut icon" href="/assets/favicon.ico?v=ajysr5673">
+
+    <script>
+      document.write('<base href="' + window.location.pathname + '"/>');
+
+    </script>
   </head>
 
   <body>
