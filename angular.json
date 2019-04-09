@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "raziel": {
+    "raziel-space": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/raziel",
+            "outputPath": "dist/raziel-space",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "raziel:build"
+            "browserTarget": "raziel-space:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "raziel:build:production"
+              "browserTarget": "raziel-space:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "raziel:build"
+            "browserTarget": "raziel-space:build"
           }
         },
         "test": {
@@ -96,7 +96,7 @@
         }
       }
     },
-    "raziel-e2e": {
+    "raziel-space-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -104,11 +104,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "raziel:serve"
+            "devServerTarget": "raziel-space:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "raziel:serve:production"
+              "devServerTarget": "raziel-space:serve:production"
             }
           }
         },
@@ -124,5 +124,5 @@
       }
     }
   },
-  "defaultProject": "raziel"
+  "defaultProject": "raziel-space"
 }

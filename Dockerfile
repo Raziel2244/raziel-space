@@ -1,10 +1,10 @@
 FROM node:alpine as builder
-WORKDIR '/app'
-RUN npm install -g @angular/cli
+WORKDIR /app
 COPY package.json .
 RUN npm install
 COPY . .
-RUN npm run build
+RUN npm run prod
 
 FROM nginx
-COPY --from=builder /app/dist/raziel /usr/share/nginx
+COPY --from=builder /app/dist/raziel-space /var/www/raziel-space
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf

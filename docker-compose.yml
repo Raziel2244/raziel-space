@@ -1,11 +1,17 @@
 version: "3"
 services:
   ng:
-    build:
-      context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      - modules:/app/node_modules
-      - .:/app
-volumes:
-  modules:
+    build: .
+    image: raziel-space-ng
+    restart: unless-stopped
+    labels:
+      - "traefik.docker.network=web"
+      - "traefik.enable=true"
+      - "traefik.frontend.rule=Host:raziel.space,raziel.dev"
+      - "traefik.port=80"
+      - "traefik.protocol=http"
+    networks:
+      web:
+networks:
+  web:
+    external: true
